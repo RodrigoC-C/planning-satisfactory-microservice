@@ -1,0 +1,8 @@
+{
+    "machine" : "Constructor", // Maeybe for many machine, this variable it will become in list whit more machine.
+    "objetGoals" : "Iron Ingot", 
+    "dimension" : 20, // This variable is optional and int the future could be list for dimension length, width and depth
+    "converyor belt" : "mk1", 
+    "storage" : "container", // This variable is optional
+    "powerStable" : "300 MW"
+}
