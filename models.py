@@ -1,88 +1,69 @@
 from dataclasses import dataclass 
+from typing import Optional
 
 @dataclass
-class MachineCore:
-    """ The all machine of system contain the core"""
-    def base(
-        name: str ,
-        length: int,
-        width: int,
-        heigth: int,
-        area: int,
-        ingredients: str
-    ) -> None:
-        
-        name = name
-        length = length
-        width = width
-        heigth = heigth 
-        area = area 
-        ingredients = ingredients
-
-@dataclass
-class ModuleExtracion: 
+class ModuleExtraction: 
     """ Class for machine that extraction resource example Miner, wather, oli """
-    def extract(
-        outputs: int,
-        item_minute_outputs: int
-    ) -> None: 
-        
-        outputs = outputs
-        item_minute_outputs = item_minute_outputs
+    outputs: int
+    item_minute_outputs: int
 
 @dataclass 
 class ModuleCrafter:
     """ Module for all machine that crafter """
-    def crafter(
-        inputs: int,
-        item_minute_inputs: int,
-        outputs: int,
-        item_minute_outputs: int
-    ) -> None:
-        
-        inputs = inputs
-        item_minute_inputs = item_minute_inputs
-        outputs = outputs
-        item_minute_outputs = item_minute_outputs
+    inputs: int
+    item_minute_inputs: int
+    outputs: int
+    item_minute_outputs: int
 
 @dataclass
 class ModuleEnergy:
     """ Module for all machine that usage energy """
-    def energy(
-        power_usage: int,
-    ) -> None:
-        
-        power_usage = power_usage
+    power_usage: int
 
 @dataclass
 class ModuleInventory:
     """ Module for machine that they have inventory """
-    def inventory(
-        inventory_size: int,
-        inputs: int,
-        outputs: int,
-    ) -> None:
-        
-        inventory_size = inventory_size
-        inputs = inputs
-        outputs = outputs
+    inventory_size: int
+    inputs: int
+    outputs: int
+
 
 @dataclass
 class ModuleOverclock:
     """ Module of machine that has it enabled the overclock """
-    def overclock(
-        overclock_able: bool,
-        porcent_boost: float
-    ) -> None:
-        
-        overclock_able = overclock_able
-        porcent_boost = porcent_boost
+    overclock_able: bool
+    porcent_boost: float
+
 
 @dataclass 
 class ModuleTransport:
     """ Module the machine of transport of item """
-    def transport(
-        item_minute = int,
-    ) -> None:
-        
-        item_minute = item_minute
+    item_minute: int
+
+@dataclass
+class Conection():
+    source_id: int
+    target_id: int 
+
+    # This variable is optional
+    transport: Optional[ModuleTransport]
+
+
+@dataclass
+class MachineCore:
+    """ The all machine of system contain the core"""
+    id_machine: str
+    name: str 
+    length: int
+    width: int
+    heigth: int
+    area: int
+    ingredients: str
+
+    # The modules these optinal the base machine
+
+    extraction: Optional[ModuleExtraction]
+    crafter: Optional[ModuleCrafter]
+    energy: Optional[ModuleEnergy]
+    inventory: Optional[ModuleInventory]
+    overclock: Optional[ModuleOverclock]
