@@ -1,0 +1,8 @@
+{
+    "machine" : "Constructor",
+    "objetGoals" : "Iron Ingot", 
+    "dimension" : 20, 
+    "converyor belt" : "mk1", 
+    "storage" : "container", 
+    "powerStable" : "300 MW"
+}
