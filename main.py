@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-from create_class import create, read_json
+from create_class import read_json
 from models import MachineCore
-import json 
 
 app = FastAPI()
 

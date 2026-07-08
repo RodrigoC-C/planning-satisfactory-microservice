@@ -14,9 +14,5 @@ def create():
     
     machine = MachineCore.from_dict(read_json)
     return machine
-# Create lecture of json whit class base and component
 
-machine1 = MachineCore.from_dict(read_json())
-
-print(machine1)
 
