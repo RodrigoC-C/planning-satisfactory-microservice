@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from create_class import read_json
+from create_class import create, read_json
+from models import MachineCore
+import json 
 
 app = FastAPI()
 
 @app.get("/")
 async def root():
-    read = read_json()
-
-    return read
+    machine1 = MachineCore.from_dict(read_json())
+    return machine1
