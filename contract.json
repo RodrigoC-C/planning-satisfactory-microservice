@@ -1,0 +1,34 @@
+{
+    "id_machine" : "1",
+    "name" : "Constructor",
+    "length" : 20,
+    "width" : 30,
+    "heigth" : 40,
+    "area" : 240,
+    "ingredients" : [],
+    
+    "extraction" : {
+        "extraction" : 2,
+        "outputs" : 4,
+        "item_minute_outputs" : 3
+    },
+
+    "crafter" : {
+        "inputs" : 3,
+        "item_minute_inputs" : 2,
+        "outputs" : 5,
+        "item_minute_outputs" : 3  
+    },
+    "energy" : {
+        "power_usage" : 78
+    },
+    "invetory" : {
+        "inventory_size" : 24,
+        "inputs" : 5,
+        "outputs" : 7
+    },
+    "overclock" : {
+        "overclock_able" : "yes",
+        "porcent_boost" : 200
+    }
+}
